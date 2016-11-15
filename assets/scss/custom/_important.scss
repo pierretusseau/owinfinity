@@ -1,0 +1,37 @@
+
+.contain-content {
+	width:100vw !important;
+}
+
+/*****************
+  BUTTON
+*****************/
+.tabs-title a,
+.skill-button {
+  margin-right: 10px !important;
+  &:hover {
+	  background-color: rgba($white,0.75) !important;
+  }
+  &.activated-button {
+	  background-color: $white !important;
+  }
+}
+
+.sb-larger.activated-button img {
+	top: -70px !important;
+	// left: -13px !important;
+}
+
+/*****************
+  SKILL-BLOCK
+*****************/
+.img-infinite { // The infinite in "ammo"
+	opacity: 1 !important;
+}
+
+/*****************
+  Description skill
+*****************/
+.important-alone {
+	margin-top: 40px;
+}

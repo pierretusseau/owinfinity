@@ -1,0 +1,223 @@
+$hfooter : 60px;
+
+#footer-container {
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 0;
+	min-height: 100px;
+	z-index: 5;
+	// border-top: 1px solid #ccc;
+	// margin-top: rem-calc(60);
+
+	header {
+		background-color: rgba($white,0.5);
+		height: 50px;
+		border-top: 2px solid #fff;
+		position: relative;
+		top:-10px;
+		// bottom: 2px;
+	}
+	#footer {
+		width:100%;
+		height:$hfooter;
+		background-color: #222;
+		bottom: 0;
+		position: absolute;
+		// @include grid-row();
+		// padding: rem-calc(30) 0;
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.prefooter-list {
+	height:50px;
+	// background:blue;
+	text-align: center;
+	position: relative;
+	top:-2px;
+	li {
+		display: inline-block;
+		// background:red;
+		vertical-align: top;
+		position: relative;
+		h6 {
+			position: absolute;
+			top:-45px;
+			right:0;
+			left:0;
+			margin:auto;
+			// background-color: red;
+			color:$white;
+			opacity: 0;
+			font-size: rem-calc(12);
+			transition: 400ms;
+			transform: rotate(-90deg);
+			text-align: left;
+			z-index: 10;
+		}
+		&:hover h6 {
+			opacity: 1 !important;
+		}
+	}
+}
+
+.footer-gallery {
+	background:rgba($white,0);
+	display: block;
+	width:43px;
+	height:50px;
+	transition: 400ms;
+	line-height: 50px;
+	overflow: hidden;
+	position: relative;
+	img {
+		// transform: scale(1);
+		opacity:0.5;
+		padding-top: 55px;
+		position: absolute;
+		margin: auto;
+		// height:50px;
+		// top:-50px;
+		// bottom:-50px;
+		left:-50px;
+		right:-50px;
+		max-width:125%;
+		vertical-align: middle;
+		display: inline-block;
+	}
+	&:hover {
+		background:rgba($white,0.5) !important;
+	}
+}
+
+.img-footer {
+	// background-color: red;
+	// pointer-events: none;
+	position:relative;
+	&::before,
+	&::after {
+		position: absolute;
+		margin:auto;
+		right:120px;
+		font-size: rem-calc(9);
+		line-height: rem-calc(10);
+		text-align: right;
+		opacity:0;
+		transition:500ms ease-in-out;
+		pointer-events: none;
+		text-transform: uppercase;
+		width: 200px;
+		bottom:20px;
+	}
+	&::before {
+		content:'Overwatch and all overwatch medias are property of \00a9  Blizzard Entertainment.';
+		color:#222;
+		padding-bottom: 54px;
+	}
+	&::after {
+		content:'This website is not affiliated with Blizzard in any way.';
+		color:$white;
+		// padding-top: 65px;
+	}
+	&:hover {
+		&::after,
+		&::before {
+			right:100px;
+			opacity:0.75;
+		}
+	}
+	.img-footer-wrap {
+		display: block;
+		position: relative;
+		height: $hfooter;
+		width:100%;
+		opacity:0.25;
+		transition:500ms ease-in-out;
+		&:hover {
+			opacity: 0.85;
+			transform: rotateY(180deg);
+		}
+	}
+	img {
+		width: 50%;
+		top: 14px;
+		margin: auto;
+		left: 0;
+		right:0;
+		line-height: $hfooter;
+		position: absolute;
+		vertical-align: middle;
+		display: inline-block;
+		pointer-events: none;
+	}
+}
+.custom-menu-footer {
+	// background-color: blue;
+	.menu-footer-fr-container,
+	.menu-footer-en-container {
+		height: $hfooter;
+		position: relative;
+		// text-align: center;
+	}
+	h6 {
+		display: none;
+	}
+	ul {
+		position:absolute;
+		margin:auto !important;
+		left: 0;
+		right: 0;
+		display: inline-block;
+		line-height: $hfooter;
+		.menu-item {
+			vertical-align: middle;
+			display: inline-block;
+			height: 25px;
+			// background:green;
+			border-right:1px rgba($white,0.5) solid;
+			transform: skewX(160deg);
+			overflow: hidden;
+			margin: auto;
+			top:0;
+			bottom:0;
+			a {
+				// margin-right: 10px;
+				transform: skewX(-160deg);
+				margin:0;
+				padding: 0 20px;
+				font-size: rem-calc(10);
+				text-transform: uppercase;
+				// height: 25px;
+				line-height: 25px;
+				width: auto;
+				transition:400ms ease;
+				&:hover {
+					color:$OWorange;
+				}
+			}
+		}
+	}
+}
+.copy-footer {
+	// background-color: red;
+	height: $hfooter;
+	line-height: $hfooter;
+	color:rgba($white,0.5);
+	font-size: rem-calc(8);
+	text-transform: uppercase;
+	opacity:1;
+	text-align: right;
+	letter-spacing:2px;
+	a {
+		transition: 500ms ease;
+		&:hover {
+			color:$OWorange;
+		}
+	}
+}

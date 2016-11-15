@@ -1,0 +1,38 @@
+/*****************
+  Skill Button (buttons.sccs)
+*****************/
+.skill-button {
+	width:$sbwidth * 0.75;
+	height:$sbheight * 0.75;
+	border-radius: 5px;
+	border: solid 1px $white;
+	margin-right:5px !important;
+	.skill-img-wrap {
+		top: -15px;
+		left: -12px;
+		img {
+			max-width: $sbwidth * 0.75;
+		}
+	}
+    &.activated-button:not(.disabled) {
+  	  img {
+  		top: ($sbwidth * -0.75);
+		left: -2px;
+  		}
+  	}
+}
+
+.sb-larger {
+	.skill-img-wrap {
+		top: -15px;
+		left: -54px;
+		img {
+			max-width: $sbwidth * 2;
+		}
+	}
+	&.activated-button {
+		img {
+			top: -60px !important;
+		}
+	}
+}

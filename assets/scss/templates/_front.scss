@@ -1,0 +1,242 @@
+/*****************
+  Front
+*****************/
+.page-template-front,
+.page-template-page-full-width {
+	background-image: url(../../assets/images/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	// max-width: 100vw;
+}
+.page-template-front .container {
+	top:0 !important;
+	.main-wrap {
+		height: 0vh;
+	}
+}
+.main-gallery-wrapper {
+	@include linear-transparent(rgba($black,0.15));
+	padding-top: 75px;
+	position: relative;
+	top: -125px;
+}
+
+/*****************
+  EPHEMERE START
+*****************/
+
+@keyframes flickerAnimation {
+  0%   { opacity:0.75; }
+  50%  { opacity:0.25; }
+  100% { opacity:0.75; }
+}
+.page-in-progress {
+	position: absolute;
+	width:100vw;
+	height:400px;
+	text-align: center;
+	padding-top: 125px;
+	    opacity:0.75;
+	    animation: flickerAnimation 2s infinite;
+	.page-in-progress--img {
+		display: inline-block;
+		text-align: center;
+	}
+}
+/*****************
+  EPHEMERE END
+*****************/
+
+.main-wrap {
+	position: relative;
+	top:0;
+	padding-top: 60vh;
+	// width: 100vw;
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+.home-gallery--wrapper {
+	display: inline-block;
+	position: relative;
+	margin-bottom:65px;
+	opacity: 0;
+	left: 20px;
+	&:hover {
+		.home-gallery--name {
+			// top:-30px;
+			color:$black;
+			-webkit-transform: translateZ(0px) scale(2);
+			-moz-transform: translateZ(0px) scale(2);
+			transform: translateZ(0px) scale(2);
+			z-index: 1;
+		}
+		.home-gallery--item a {
+			transform: rotateY( 180deg );
+			.front { opacity : 0 ; }
+		}
+	}
+}
+.home-gallery--name {
+	@include no-flicker;
+	cursor: default;
+	position: absolute;
+	width: 100%;
+	font-size: rem-calc(12);
+	text-align: center;
+	top:-35px;
+	color:$white;
+	margin-left:14px;
+	transition:1000ms ease;
+	text-transform: uppercase;
+}
+.home-gallery--item {
+	height: 80px;
+	width: 90px;
+	overflow: hidden;
+	margin-right: 12px;
+	transform: skewX(150deg);
+	border-radius: 10px;
+	box-shadow: 0px 0px 0px 3px $white;
+	// border: 3px solid $white;
+	background-color: rgba($white,0.5);
+	transition: 250ms ease;
+	position: relative;
+	perspective: 800px;
+	a {
+	    position: absolute;
+	    transform-style: preserve-3d;
+	    transition: transform 0.4s;
+		display: block;
+		height: 80px;
+		width:90px;
+		top:0;
+		transform: skewX(-150deg);
+		color:$white !important;
+		figure {
+		  margin: auto;
+		  display: block;
+		  position: absolute;
+		  width: 200px;
+		  left:-50px;
+		  right:-50px;
+		  height: 100%;
+		  backface-visibility: hidden;
+			img {
+				position: absolute;
+			}
+		}
+		.front {
+			transition:1000ms;
+			border-radius: 10px;
+			img {
+				position: absolute;
+				left:50px;
+				max-width: 50%;
+			}
+		}
+		.back {
+			position: relative;
+			transform: skewX(-30deg) rotateY( 180deg );
+			background-color: rgba($black,0.75);
+			color:$white;
+		  img,
+		  h3 {
+			  margin:auto;
+			  left:-50px;
+			  right:-50px;
+			  transform: rotate(30deg);
+		  }
+		  img {
+			  width:25%;
+			  top:0px;
+			  margin-left: 136px;
+		  }
+		  h3 {
+			  width: 100%;
+			  font-size: rem-calc(12);
+			  text-align: center;
+			  top: 0;
+			  padding-top: 46px;
+			  padding-left: 17px;
+			  text-transform: uppercase;
+		  }
+		}
+	}
+}
+
+.attack-flip {
+	// color:rgba(red,1);
+}
+.defense-flip {
+	// color:rgba(blue,1);
+}
+.tank-flip {
+	// color:rgba(orange,1);
+}
+.support-flip {
+	// color:rgba(green,1);
+}
+
+/*****************
+  countdown OverWatch
+*****************/
+
+#clock-wrapper {
+	position: absolute;
+	margin: auto;
+	top:20vh;
+	left:0;
+	right:0;
+	text-align: center;
+	color:$white;
+	background-color: rgba($black,0.15);
+	// max-width: 100vw;
+	h3 {
+		position: relative;
+		right: 10px;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0;
+		font-size: rem-calc(40);
+		margin-top: 20px;
+	}
+}
+#clock {
+	h2 {
+		font-weight: normal;
+	}
+	span {
+		margin-right: 20px;
+		// color: $OWorange;
+		font-family: BigNoodle;
+		font-size: rem-calc(100);
+		line-height: rem-calc(100);
+		@include font-outline(rgba($OWorange,0.5),$OWorange,2px);
+		&::after {
+			font-size: rem-calc(75);
+			@include font-outline(rgba($white,0.5),$white,2px);
+		}
+	}
+	span#clock-day {
+		&::after {
+			content:"D"
+		}
+	}
+	span#clock-hour {
+		&::after {
+			content:"H"
+		}
+	}
+	span#clock-minute {
+		&::after {
+			content:"M"
+		}
+	}
+	span#clock-second {
+		&::after {
+			content:"S"
+		}
+	}
+}

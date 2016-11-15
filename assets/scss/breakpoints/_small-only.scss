@@ -1,0 +1,57 @@
+/*****************
+  Skill Button (buttons.sccs)
+*****************/
+.skill-button {
+	width:$sbwidth / 2;
+	height:$sbheight / 2;
+	border-radius: 5px;
+	border: solid 1px $white;
+	margin-right:5px !important;
+	.skill-img-wrap {
+		top: -13px;
+		left: -9px;
+		img {
+			max-width: $sbheight / 2;
+		}
+	}
+    &.activated-button:not(.disabled) {
+  	  img {
+  		top: -37px;
+  		}
+  	}
+}
+
+.sb-larger {
+	width:45px;
+	.skill-img-wrap {
+		top: -10px;
+		left: -20px;
+		img {
+			max-width: $sbwidth;
+		}
+	}
+	&.activated-button {
+		img {
+			top: -30px !important;
+			left: -2px;
+		}
+	}
+}
+
+/*****************
+  Block info
+*****************/
+.block-name {// Titre du block-name
+	text-transform: uppercase;
+	font-size: rem-calc(14) !important;
+}
+
+.skill-common .decal-droite {
+	left : -10px;
+}
+
+.skill-block {
+	article { // textes descriptifs
+		font-size: rem-calc(12);
+	}
+}

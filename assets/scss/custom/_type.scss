@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Futura;
+    src: url(../fonts/FuturaStd-Heavy.otf);
+}
+@font-face {
+    font-family: Futura;
+    src: url(../fonts/FuturaStd-Bold.otf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: BigNoodle;
+    src: url(../fonts/big_noodle_titling_oblique.ttf);
+}
+
+strong {
+	transition: 400ms ease;
+}
+
+ul li {
+	list-style-image: url(../../assets/images/icons/puce-liste3.png);
+}

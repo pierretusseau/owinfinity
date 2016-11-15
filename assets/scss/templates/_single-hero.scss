@@ -1,0 +1,449 @@
+pre {
+	background:$white;
+}
+body {
+	position: relative;
+	min-height: 100vh;
+}
+#single-post {
+	margin-top:0px;
+}
+.single-hero {
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position:relative;
+	display: block;
+	&::after {
+		content: "";
+		opacity:0.25;
+		@include linear-transparent(#222);
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: fixed;
+		z-index: -1;
+	}
+	.container {
+		min-height: 30vh;
+	}
+	.wrap {
+		position: relative;
+	}
+	.is-ptr {
+		&::after {
+			content:"";
+			display: block;
+			height:75px;
+			width:75px;
+			background-image: url(../images/icons/skill-common/ptr.png);
+			transform : skewX(-160deg);
+			position: absolute;
+			top:-26px;
+			left:-17px;
+		}
+	}
+}
+// Blocs bleus
+.blue-block {
+	background-color: rgba(#000,0.25);
+	// @include linear-transparent(rgba(#000,0.25));
+	margin-top:20px;
+	overflow: visible;
+	padding: 20px 20px 15px 20px;
+	position:relative;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+}
+.blue-block-skill {
+	opacity: 0;
+	margin-left:-50px;
+}
+// Bloc de compétence
+.skill-block:hover .skill-box {
+	opacity:0.75;
+	background: rgba($secondary-color,0.35);
+	border-right:3px solid rgba($white,0.5);
+}
+.skill-block-wrapper {
+	// display: none;
+	width:100%;
+	position:absolute;
+	opacity: 0;
+	left:-50px;
+	// top:50px;
+	h2 {
+		font-size: rem-calc(30);
+		color:$white;
+	}
+}
+.onLeft {
+	// is on left
+}
+.skill-block-active {
+	display: block;
+	z-index: 3;
+}
+.skill-block-content {
+	color:$white;
+	margin-bottom: 20px;
+}
+
+.keybinding-image-wrapper {
+	background:red;
+	position: relative;
+	.keybinding-image {
+		position: absolute;
+		top:5px;
+		right:20px;
+		// background:blue;
+	}
+}
+
+.skill-block-text {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	ul {
+		margin: 0 0 20px 20px !important;
+	}
+}
+.large-value {
+	background-color: rgba($black,0.15);
+	// color:$OWorange;
+	position: relative;
+	padding: 0;
+	// height:100%;
+	p,ul {
+		width:100%;
+		text-align: center;
+		position: absolute;
+		  top: 50%;
+		  padding: 0 10px;
+		  transform: translateY(-50%);
+	}
+	&::before {
+		content:"Important";
+		text-transform :uppercase;
+		color:$white;
+		background:$OWorange;
+		box-shadow: 0px 0px 2px 4px rgba($OWorange,0.25);
+		font-size: rem-calc(10);
+		padding:5px 10px;
+		border-radius: 5px;
+		position: absolute;
+		top:-20px;
+		left:-20px;
+	}
+}
+
+// Liste de compétences
+.skill-list {
+	ul {
+		li {
+			display: inline-block;
+			// width: 60px;
+			// height: 60px;
+			// background:grey;
+			// vertical-align: middle;
+		}
+	}
+}
+
+/*****************
+  SKILL COMMON
+*****************/
+// Skill common general values
+$scheight : 70px;
+$scwidth  : 70px;
+
+.skill-block-commons {
+	padding-left: 10px;
+}
+.skill-common {
+	position: relative;
+	// background-color: red;
+	height: $scheight;
+	line-height: $scheight;
+	text-align: center;
+	width: $scwidth;
+	font-size: rem-calc(50);
+	color:$white;
+	font-family: BigNoodle;
+	&:not(.weapon-image) {
+		margin-right: 20px;
+	}
+	.value {
+		@include font-outline($white,$white,1px);
+		line-height: $scheight;
+		text-align: center;
+		min-width: $scwidth;
+		position: relative;
+		left:-15px;
+	}
+	.decal-droite {
+		left:-12px;
+	}
+	img {
+		top: 0;
+		left:0;
+		position: absolute;
+		z-index: -1;
+		opacity: 0.45;
+	}
+	h6 {
+		position: absolute;
+		// background-color: red;
+		text-transform: uppercase;
+		font-size: rem-calc(10);
+		text-align: center;
+		width:100%;
+		bottom:-25px;
+		left:0;
+	}
+}
+
+.weapon-image {
+	height:$scheight;
+	width:$scheight * 2;
+	background-color: transparent;
+	line-height: $scheight;
+	text-align: center;
+	position: relative;
+	img {
+		display: inline-block;
+		position: absolute;
+		margin: auto;
+		top: -150px;
+		bottom: -150px;
+		left: -150px;
+		right: -150px;
+		opacity: 1;
+	}
+}
+
+.damage-number {
+	font-size: rem-calc(30);
+}
+
+.note-wrapper {
+	margin-top: 40px;
+}
+
+.ammo-used {
+	font-family: Futura;
+	font-size: rem-calc(10);
+	line-height: 20px;
+	text-align: center;
+	overflow: visible;
+	background:#222;
+	height: 20px;
+	width:20px;
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	border-radius: 50%;
+}
+
+.large-description {
+	margin-bottom:0px;
+}
+
+.skill-box {
+	display: none;
+	position: absolute;
+	box-shadow: -50px 0px 50px 0px $white;
+	max-width: 70px;
+	max-height: 70px;
+	overflow: hidden;
+	background: rgba($white,0);
+	bottom:0;
+	left:-70px;
+	opacity:0.25;
+	transition: 400ms ease;
+	z-index: -1;
+	border-right: solid 3px rgba($white,0.15);
+	&.ult-skill-box {
+		right:-20px;
+		max-width:140px;
+		img {
+			max-width:120%;
+		}
+	}
+}
+
+.arrow {
+  position: absolute;
+  bottom: 50px;
+  left: -30px;
+  margin-left:-20px;
+  width: 40px;
+  height: 40px;
+  opacity:1;
+  transform: rotate(-90deg);
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+  background-size: contain;
+}
+
+.charpage-header {
+	position: relative;
+}
+.cat-icon {
+	position:absolute;
+	top:0px;
+	left:-800px;
+	opacity: 0;
+}
+
+/*****************
+  TABLEAU TORBJORN
+*****************/
+.effect-table { // Selecteur générique
+	.torbjorn-fusion {
+		// nothing
+	}
+	.table-small {
+		font-size: rem-calc(10);
+	}
+}
+#torbjorn-table { // Tableau de torbjorn
+
+}
+
+/*****************
+  Barre de vie
+*****************/
+$bbwidth : 30px;
+$bbheight : 25px;
+$blueShield : #68ddff;
+
+.life-block {
+	position: relative;
+	min-height: $bbheight + 10;
+	left:-50px;
+	opacity:0;
+	.blocks-wrapper {
+		position: relative;
+		left:100px;
+	}
+	.bubble {
+		opacity:0;
+	}
+	h3 {
+		font-family: BigNoodle;
+		transform: skewX(160deg);
+		font-size: rem-calc(50);
+		position: absolute;
+		top:-10px;
+		left:0px;
+		text-align: center;
+		.mini-health {
+			font-size: rem-calc(15);
+		}
+	}
+}
+
+.life-bubble,
+.armor-bubble,
+.shield-bubble {
+	display: inline-block;
+	// width:$bbwidth;
+	height:$bbheight;
+	margin-right:2px;
+	transform : skewX(160deg);
+	border-radius: 2px;
+	border: solid 1px rgba($white,0.15);
+	text-indent: -99999px;
+	h6 {
+		color:rgba($white,0);
+		line-height: $bbheight - 3;
+		text-align: center;
+		font-size: rem-calc(20);
+		font-weight: bold;
+	}
+}
+.life-bubble {
+	background-color:rgba($white,0.5);
+}
+.armor-bubble {
+	background-color:rgba($OWorange,0.5);
+}
+.shield-bubble {
+	background:rgba($blueShield,0.5);
+	margin:0 2px 0 0;
+	padding: 0;
+	border: 0;
+}
+.life-bubble:last-of-type,
+.armor-bubble:last-of-type,
+.shield-bubble:last-of-type {
+	position: relative;
+	width: $bbwidth*2 !important;
+	text-indent: 0;
+	h6 {
+		// color: rgba($white,0.9);
+		transform: skewX(-160deg);
+	}
+	&::after {
+		transform: skewX(-160deg);
+		text-transform: uppercase;
+		font-size: rem-calc(12);
+		display: block;
+		position: absolute;
+		left:7px;
+		top:$bbheight/3;
+		width: $bbwidth*2;
+		height:$bbheight*2;
+		line-height: $bbheight*2;
+		text-align: center;
+	}
+}
+.life-bubble:last-of-type {
+	h6 {
+		// color:rgba($white,0.75);
+		@include font-outline(rgba($white,0.8),rgba($black,0.3),1px);
+	}
+	&::after {
+		color:rgba($white,0.75);
+		content:'Life';
+	}
+}
+.armor-bubble:last-of-type {
+	h6 {
+		// color:rgba($OWorange,0.75);
+		@include font-outline(rgba($OWorange,0.8),rgba($black,0.3),1px);
+	}
+	&::after {
+		color:rgba($OWorange,0.75);
+		content:'Armor';
+	}
+}
+.shield-bubble:last-of-type {
+	h6 {
+		// color:rgba($blueShield,0.75);
+		@include font-outline(rgba($blueShield,0.8),rgba($black,0.3),1px);
+	}
+	&::after {
+		color:rgba($blueShield,0.75);
+		content:'Shield';
+	}
+}
+
+.last-edited-wrap {
+	position: absolute;
+	right:0;
+	top:-80px;
+	// background:red;
+	h2 {
+		font-size: rem-calc(12);
+		text-transform: uppercase;
+		opacity:0.50;
+		strong {
+			font-family: BigNoodle;
+			font-size: rem-calc(50);
+			font-style: italic;
+		}
+	}
+}

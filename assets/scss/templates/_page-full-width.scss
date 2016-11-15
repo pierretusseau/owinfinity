@@ -1,0 +1,30 @@
+#page-full-width { // content
+	color:$white;
+	background-color: rgba($secondary-color,0.3);
+  @include grid-row();
+  margin-top: 45px;
+
+  .main-content {
+    @include breakpoint(small) {
+      @include grid-column(12);
+    }
+
+  }
+  h2 {
+	text-transform: uppercase;
+  }
+}
+#tod-table {
+	tr td:last-child {
+		text-align: left;
+		line-height: rem-calc(20);
+	}
+	img {
+		max-width: 85%;
+	}
+}
+
+.wpcf7-form {
+	margin-top: 20px;
+	// max-width: 50%;
+}

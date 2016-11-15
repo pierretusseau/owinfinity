@@ -1,0 +1,39 @@
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+// background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+// background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+// background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+
+@mixin linear-transparent($color1) {
+	background-image: -moz-linear-gradient(-45deg, $color1 0%, rgba($color1,0) 100%); /* FF3.6-15 */
+	background-image: -webkit-linear-gradient(-45deg, $color1 0%, rgba($color1,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background-image: linear-gradient(135deg, $color1 0%, rgba($color1,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='#0ff',GradientType=1 ); /* IE6-9 */
+}
+
+@mixin font-outline($color1,$color2,$epaisseur) {
+   color: $color1;
+   -webkit-text-fill-color: $color1; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: $epaisseur;
+   -webkit-text-stroke-color: $color2;
+}
+
+/*****************
+  GENERAL RULES
+*****************/
+@mixin no-flicker{
+	-webkit-transform-style: preserve-3d !important;
+	-webkit-backface-visibility: hidden !important;
+	-moz-transform-style: preserve-3d !important;
+	-moz-backface-visibility:    hidden !important;
+	-ms-backface-visibility:     hidden !important;
+	// -webkit-transform: translate3d(0, 0, 0);
+	// -moz-transform: translate3d(0, 0, 0);
+    // -webkit-transform: translateZ(0);
+    // -moz-transform: translateZ(0);
+    // -ms-transform: translateZ(0);
+    // -o-transform: translateZ(0);
+    // transform: translateZ(0);
+}
+
+$OWorange : #f99e1a;

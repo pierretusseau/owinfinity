@@ -1,0 +1,130 @@
+.charCLR {
+	clear: both;
+	height: 50vh;
+	width:100%;
+	// background:red;
+};
+.clr {
+	clear: both;
+};
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+	color:$white;
+}
+h1 {
+	margin-top:10vh;
+	font-size: rem-calc(80);
+	@include font-outline($white,$white,1px);
+	font-family: BigNoodle;
+	transform: skewX(-20deg);
+	line-height: 40px;
+	padding-left: 10px;
+	left:-50px;
+	opacity: 0;
+	position: relative;
+	display: block;
+	&::before {
+		@include linear-transparent(rgba($white,0.50));
+		content: '';
+		z-index: -1;
+		width: 100%;
+		height: 60px;
+		top:-20px;
+		left:0px;
+		opacity:0.5;
+		display: block;
+		position: absolute;
+	}
+}
+table {
+	border-collapse: separate;
+	border-spacing : 2px;
+	text-align: center;
+	cursor: default;
+	tbody {
+		background-color: rgba($white,0.10);
+		tr:first-child {
+			background-color: rgba($white,0.35);
+		}
+		tr:nth-child(n+2) {
+			opacity:0.75;
+			@include no-flicker;
+			transition: 400ms ease;
+			&:hover {
+				opacity: 1;
+				strong {color:#222;}
+				&:nth-child(odd) {
+					background-color: rgba($OWorange,0.25);
+				}
+				&:nth-child(even) {
+					background-color: rgba($OWorange,0.25);
+				}
+			}
+			&:nth-child(even) {
+				background-color: rgba($white,0.20);
+			}
+		}
+		th {
+			font-size: rem-calc(12);
+			text-transform: uppercase;
+			&:last-child {
+				font-size: rem-calc(15);
+			}
+		}
+		td p {
+			margin: 0;
+		}
+	}
+}
+
+blockquote {
+	border-left: 2px solid rgba(#222,0.75);
+	@include linear-transparent(rgba(#222,0.25));
+	padding: 10px;
+	p {
+		color:$white;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.container {
+	position: relative;
+	top:50px;
+}
+.page-template {
+	#page-full-width {
+		padding-top: 10px;
+		margin-top: 20px;
+	}
+	h1 {
+		margin-top: 100px;
+	}
+}
+
+.wpcf7-submit {
+	background: rgba($white,0.15);
+	padding: 10px 50px;
+	border-radius: 10px;
+	border: solid 3px $white;
+	transition: 400ms ease;
+	&:hover {
+		background:rgba($white,1);
+		color:#222;
+	}
+}
+
+*::selection {
+	background: rgba($OWorange,0.5) !important; /* WebKit/Blink Browsers */
+}
+*::-moz-selection {
+	background: rgba($OWorange,0.5) !important; /* Gecko Browsers */
+}
+
+img {
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
