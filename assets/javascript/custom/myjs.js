@@ -1,5 +1,12 @@
-jQuery(window).ready(function(){
 
+
+jQuery(window).ready(function(){
+	window.addEventListener('load', function(){
+		var load_screen = document.getElementById("load_screen");
+		setTimeout(function(){
+			load_screen.parentElement.removeChild(load_screen);
+		},2000);
+	});
 	// REDIRECTION A GARDER ETEINT
 	// var element = $(".overlay-redirect a");
 	// var element2 = $(".overlay-redirect p span");
@@ -19,7 +26,8 @@ jQuery(window).ready(function(){
 		bubbleNumber++;
 	});
 	var bubbleWidth = parseInt(((parseInt(bubbleBlockWidth) / 1.5) / bubbleNumber) - 10);
-	console.log("La largeur de ma bulle est de >>" + bubbleWidth + "px<<");
+	// Aide au calcul
+	// console.log("La largeur de ma bulle est de >>" + bubbleWidth + "px<<");
 	$('.bubble').css('width',bubbleWidth);
 
 
@@ -180,4 +188,7 @@ jQuery(document).ready(function(){
 			}
 		}
 	});
+
+
+
 });
