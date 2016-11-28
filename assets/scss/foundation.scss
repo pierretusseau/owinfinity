@@ -30,7 +30,7 @@
 
 // Individual foundation components
 @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -68,7 +68,7 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-menu-icon;
-// @include foundation-flex-classes;
+@include foundation-flex-classes;
 
 // Motion UI
 @include motion-ui-transitions;
@@ -78,7 +78,7 @@
   My custom styles:
   Add your scss files below to structure your project styles
 */
-@import "custom/loader";
+// @import "custom/loader";
 
 // Modules
 @import "modules/navigation";
@@ -92,7 +92,8 @@
 @import "components/links";
 
 // Templates
-@import "templates/front";
+// @import "templates/front";
+@import "templates/frontv2";
 @import "templates/kitchen-sink";
 @import "templates/page-default";
 @import "templates/page-sidebar-left";

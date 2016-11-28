@@ -9,6 +9,8 @@
 	top: 0px;
 	width: 100%;
 	height: 1600px;
+	transition: 400ms ease-in;
+	pointer-events:none;
 	#loading{
 		color:#FFF;
 		width:120px;

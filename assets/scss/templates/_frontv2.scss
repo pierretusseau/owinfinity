@@ -1,0 +1,63 @@
+/*****************
+  Front v2.0 (rework)
+*****************/
+.main-wrap {
+	position: relative;
+	top:0;
+	// padding-top: 60vh;
+	// width: 100vw;
+	height: 100vh;
+	background-attachment: fixed;
+}
+#listing-hero,
+#home-second-part {
+// This is for the two parts of the home page
+	height:800px;
+}
+/*****************
+  listing hero + aperçu hero (partie 1)
+*****************/
+#listing-hero {
+// This list everything for the hero listing
+	background-image: url('../images/home-background.jpg');
+	position: relative;
+	margin-top: -50px;
+	width: 100%;
+	h3 {
+		transform: skewX(-10deg);
+		font-family: BigNoodle;
+		font-size: rem-calc(50);
+		margin: 25px 0 0 0;
+	}
+}
+.wrap--partie-1 {
+	padding-top: 50px;
+}
+.home--list-heroes {
+	li {
+		display: inline-block;
+		width:60px;
+		height:50px;
+		background-color: rgba($white,0.75);
+		border: solid 3px $white;
+		transform: skewX(-20deg);
+		@include border-radius(10px);
+		margin: 0 10px 0 0;
+	}
+}
+#home--recent-updates {
+	li {
+		display:inline-block;
+		article {
+			background:rgba($white,0.5);
+			min-height: 100px;
+		}
+	}
+}
+/*****************
+  Communautés (partie 2)
+*****************/
+#home-second-part {
+// This list everything for the hero listing
+	background:#313131;
+}

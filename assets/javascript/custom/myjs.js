@@ -2,10 +2,11 @@
 
 jQuery(window).ready(function(){
 	window.addEventListener('load', function(){
-		var load_screen = document.getElementById("load_screen");
+		var loadScreen = document.getElementById("load_screen");
 		setTimeout(function(){
-			load_screen.parentElement.removeChild(load_screen);
-		},2000);
+			$(loadScreen).css('opacity','0');
+			$(loadScreen).css('z-index','-999');
+		},3000);
 	});
 	// REDIRECTION A GARDER ETEINT
 	// var element = $(".overlay-redirect a");
