@@ -55,9 +55,34 @@
 	}
 }
 /*****************
+  SEPARATOR (entre les 2 sections)
+*****************/
+#home--separator {
+	min-height: 30px;
+	background-color: $white;
+	border-top: solid 4px $OWorange;
+}
+/*****************
   Communautés (partie 2)
 *****************/
 #home-second-part {
 // This list everything for the hero listing
 	background:#313131;
+	padding-top: 75px;
+	h3 {
+		text-transform: uppercase;
+	}
+}
+
+#home--list-blog {
+	li {
+		list-style-type: none;
+		list-style-image: none;
+	}
+}
+#home--partie-2-buttons {
+	margin-top: 20px;
+}
+#twitch-wrap {
+	background-color: $Twitch;
 }

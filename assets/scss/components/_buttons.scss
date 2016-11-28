@@ -2,8 +2,16 @@
 	max-height: 90px;
 }
 .button-group {
-	margin:0;
-	padding-left:10px;
+	// margin:0;
+	// padding-left:10px;
+}
+.button-group.expanded {
+	.button:last-child {
+		margin:0 !important;
+	}
+	.button {
+		width: 43.45% !important;
+	}
 }
 .button-wrap {
 	position: relative;
