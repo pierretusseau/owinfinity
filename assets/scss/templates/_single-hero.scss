@@ -107,7 +107,7 @@ body {
 	margin-top: 10px;
 	margin-bottom: 0px;
 	ul {
-		margin: 0 0 20px 20px !important;
+		margin: 0 0 0px 20px !important;
 	}
 }
 .large-value {
@@ -177,7 +177,8 @@ $scwidth  : 70px;
 	}
 	.value {
 		@include font-outline($white,$white,1px);
-		line-height: $scheight;
+		// warning : Ajustement à faire ?
+		line-height: $scheight - 5px;
 		text-align: center;
 		min-width: $scwidth;
 		position: relative;
@@ -327,6 +328,7 @@ $blueShield : #68ddff;
 	.blocks-wrapper {
 		position: relative;
 		left:100px;
+		min-width:100%;
 	}
 	.bubble {
 		opacity:0;

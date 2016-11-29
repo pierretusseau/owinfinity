@@ -25,10 +25,11 @@ jQuery(window).ready(function(){
 	console.log("Block wrapper = " + bubbleBlockWidth);
 	$('.bubble').each(function(){
 		bubbleNumber++;
+		console.log(bubbleNumber);
 	});
 	var bubbleWidth = parseInt(((parseInt(bubbleBlockWidth) / 1.5) / bubbleNumber) - 10);
 	// Aide au calcul
-	// console.log("La largeur de ma bulle est de >>" + bubbleWidth + "px<<");
+	console.log("La largeur de ma bulle est de >>" + bubbleWidth + "px<<");
 	$('.bubble').css('width',bubbleWidth);
 
 

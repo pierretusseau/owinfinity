@@ -19,7 +19,7 @@
 		<div id="footer-container">
 			<?php if(!is_front_page()) : ?>
 				<header>
-					<?php do_action('MyFooterGallery',22) ?>
+					<?php do_action('MyFooterGallery',23) ?>
 				</header>
 			<?php else : ?>
 			<?php endif; ?>

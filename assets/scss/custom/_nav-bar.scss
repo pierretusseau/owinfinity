@@ -44,6 +44,9 @@ li.home a {
 		max-width: 300%;
 	}
 }
+#site-navigation {
+	position:relative;
+}
 .top-bar-right {
 	float: left;
 }
@@ -97,6 +100,10 @@ li.home a {
 	.lang-item a {
 		transform: skewX(30) !important;
 	}
+}
+.top-bar-right-right {
+	position:absolute;
+	right:0;
 }
 
 .scrolled-top {
