@@ -1,4 +1,4 @@
-<ul class="prefooter-list row">
+<ul class="prefooter-list row align-spaced">
    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
          <li class="loop-footer-wrapper">
             <a href="<?php the_permalink(); ?>" <?php post_class('footer-gallery') ?> id="post-<?php the_ID(); ?>">
