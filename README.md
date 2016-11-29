@@ -29,6 +29,7 @@ To achieve that I decided to use ACF to give me a way to display forms the way I
 ## TO-DO List of big features to come
 
 - [x] Handle the creation of new characters
+- [ ] Correction footer (centered)
 - [ ] Activate a panel on a char page (and URL Feedback)
 - [ ] Integrate SVG Animations (Blog name, home page)
 - [ ] Add some easter eggs (Konami code, whatever)
