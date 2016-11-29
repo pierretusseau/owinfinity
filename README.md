@@ -31,7 +31,7 @@ To achieve that I decided to use ACF to give me a way to display forms the way I
 - [x] Handle the creation of new characters
 - [ ] New front page...
 - [ ] ... with AJAX loading
-- [ ] Correction footer (centered)
+- [x] Correction footer (centered)
 - [x] Activate a panel on a char page...
 - [ ] ...and URL Feedback
 - [ ] Integrate SVG Animations (Blog name, home page)
