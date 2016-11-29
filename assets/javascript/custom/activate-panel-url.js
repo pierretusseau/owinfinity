@@ -56,5 +56,10 @@ if (url.includes('/hero/')) {
   } else {
     manageClickOnPrimary();
   }
-
+}
+if (history && history.pushState) {
+  $('.skill-button').click(function(){
+    var selectedSkill = ($(this).attr('id').replace('-button',''));
+    history.pushState({}, '', '?skill='+selectedSkill);
+  });
 }
