@@ -48,13 +48,13 @@ if (url.includes('/hero/')) {
       if(!$(button).hasClass('disabled')) {
         clickOnElementAfterTwoSecond($(button));
       } else {
-        manageClickOnPrimary();
+        clickOnPrimary();
       }
     } else {
-      manageClickOnPrimary();
+      clickOnPrimary();
     }
   } else {
-    manageClickOnPrimary();
+    clickOnPrimary();
   }
 }
 if (history && history.pushState) {
