@@ -43,10 +43,10 @@ jQuery(window).ready(function(){
 	//
 	// var moment = require('moment');
 	// moment().format();
-	var releaseDate = moment.tz('2016/05/23 23:00:00', "Europe/Paris");
-	$('#clock').countdown(releaseDate.toDate(), function(event) {
-      $(this).html(event.strftime('<h2 class="clock-content"><span id="clock-day">%d</span><span id="clock-hour">%H</span><span id="clock-minute">%M</span><span id="clock-second">%S</span></h2>'));
-    });
+	// var releaseDate = moment.tz('2016/05/23 23:00:00', "Europe/Paris");
+	// $('#clock').countdown(releaseDate.toDate(), function(event) {
+  //     $(this).html(event.strftime('<h2 class="clock-content"><span id="clock-day">%d</span><span id="clock-hour">%H</span><span id="clock-minute">%M</span><span id="clock-second">%S</span></h2>'));
+  //   });
 
 	// var blockHeight = [];
 	// $('.skill-block-wrapper').each(function(){
@@ -86,6 +86,8 @@ jQuery(window).ready(function(){
 		}
 	});
 });
+
+window.isBindingClickEvents = true;
 
 jQuery(document).ready(function(){
 	setTimeout(function () {
@@ -131,6 +133,7 @@ jQuery(document).ready(function(){
 			var hasSeen = 'true';
 			sessionStorage.setItem("hasSeen", hasSeen);
 		}
+window.isBindingClickEvents = false;
 
 	}, 500);
 
@@ -150,6 +153,7 @@ jQuery(document).ready(function(){
 			return arrowGone;
 		}
 	});
+
 
 	// Au moment où je clic
 	$('.skill-button').click(function(){
