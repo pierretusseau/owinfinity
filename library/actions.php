@@ -256,3 +256,30 @@
 	add_action('MyFooterGallery','FooterGallery',1,1);
 	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE
 /////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+//		Front V2.0
+////// Gallerie de héro HOMEPAGE ////////////////////////////////////////////////////////////////
+	function PostsByCategory($npost, $charcat) {
+
+
+		// Ici je définis mes arguments
+		$args   =   array(
+					//	'category__in'  =>  array(1,2), // Publiés
+						'post_type' 	=>  'hero',		// Type de post
+						'post_status'   =>  'publish',  // Publiés
+						'posts_per_page'=>  $npost,     // Nb de post (relatif)
+						'orderby'       =>  'name',     // Ordonnée par date
+						'order'         =>  'ASC'      // + grand au + petit
+					);
+		// J'effectue la requête
+		$the_query = new WP_query ($args);
+
+		// Je récupère mon template
+		require(TEMPLATEPATH.'/template-parts/loop-home.php');
+
+		// Je reste mes requêtes de post
+		wp_reset_postdata();
+	}
+	add_action('MyPostsCat','PostsByCategory',1,2);
+	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE

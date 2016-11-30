@@ -14,39 +14,40 @@ get_header(); ?>
 		<div class="wrap--partie-1 row">
 			<section id="listing--left-column" class="column small-6">
 				<h3>Attack</h3>
+				<?php do_action('MyPostsCat', 6, 'attack') ?>
 				<ul class="home--list-heroes" id="homme--list-attack">
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
 				</ul>
 				<h3>Defense</h3>
 				<ul class="home--list-heroes" id="homme--list-defense">
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
 				</ul>
 				<h3>Tank</h3>
 				<ul class="home--list-heroes" id="homme--list-tank">
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
 				</ul>
 				<h3>Support</h3>
 				<ul class="home--list-heroes" id="homme--list-support">
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
-					<li>Perso</li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
+					<li><a href="#">Perso</a></li>
 				</ul>
 			</section>
 			<section id="listing--right-column" class="column small-6">

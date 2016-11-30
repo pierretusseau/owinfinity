@@ -22,14 +22,14 @@ jQuery(window).ready(function(){
 	// Règle la taille des blocks de vie / armure / etc.
 	var bubbleNumber = 0;
 	var bubbleBlockWidth = $('.blocks-wrapper').css('width');
-	console.log("Block wrapper = " + bubbleBlockWidth);
+	// console.log("Block wrapper = " + bubbleBlockWidth);
 	$('.bubble').each(function(){
 		bubbleNumber++;
-		console.log(bubbleNumber);
+		// console.log(bubbleNumber);
 	});
 	var bubbleWidth = parseInt(((parseInt(bubbleBlockWidth) / 1.5) / bubbleNumber) - 10);
 	// Aide au calcul
-	console.log("La largeur de ma bulle est de >>" + bubbleWidth + "px<<");
+	// console.log("La largeur de ma bulle est de >>" + bubbleWidth + "px<<");
 	$('.bubble').css('width',bubbleWidth);
 
 

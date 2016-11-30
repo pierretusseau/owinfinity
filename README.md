@@ -33,7 +33,8 @@ To achieve that I decided to use ACF to give me a way to display forms the way I
 - [ ] ... with AJAX loading
 - [x] Correction footer (centered)
 - [x] Activate a panel on a char page...
-- [ ] ...and URL Feedback
+- [x] ...and URL Feedback
+- [ ] Correction on animation because of precedent update (local bug ?)
 - [ ] Integrate SVG Animations (Blog name, home page)
 - [ ] Add some easter eggs (Konami code, whatever)
 - [ ] Setup the website for new languages
