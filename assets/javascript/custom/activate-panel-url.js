@@ -5,7 +5,7 @@ if ( !String.prototype.includes ) {
     'use strict';
     if (typeof start !== 'number') {
       start = 0;
-    } 
+    }
 
     if (start + search.length > this.length) {
       return false;
@@ -31,7 +31,7 @@ function clickOnElementAfterTwoSecond(elem) {
   return setTimeout(function() {
     elem.click();
   }, 2000);
-} 
+}
 
 function clickOnPrimary() {
   return clickOnElementAfterTwoSecond($('#lclick-button'));
@@ -58,8 +58,10 @@ if (url.includes('/hero/')) {
   }
 }
 if (history && history.pushState) {
-  $('.skill-button').click(function(){
-    var selectedSkill = ($(this).attr('id').replace('-button',''));
-    history.pushState({}, '', '?skill='+selectedSkill);
-  });
+  setTimeout(function() {
+    $('.skill-button').click(function(){
+      var selectedSkill = ($(this).attr('id').replace('-button',''));
+      history.pushState({}, '', '?skill='+selectedSkill);
+    });
+  }, 0);
 }

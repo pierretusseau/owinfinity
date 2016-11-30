@@ -1,0 +1,25 @@
+/*****************
+  ANIMATION ===================================
+*****************/
+/*****************
+  Exemple de keyframe + application
+*****************/
+// @keyframes magie {
+// 	0%{background:rgba(150,0,0,0);}
+// 	50% {background:rgba(150,0,0,0.5);},
+// 	100%{background:rgba(150,0,0,0);}
+// }
+
+// #text_1,#text_2,#text_3,#text_4 {
+// 	animation: offsettext 10s ease-in-out infinite;
+// }
+
+/*****************
+  HOME =======================================
+*****************/
+
+@keyframes magie {
+	0% {background:rgba(150,0,0,0);},
+	50% {background:rgba(150,0,0,0.5);},
+	100% {background:rgba(150,0,0,0);}
+}

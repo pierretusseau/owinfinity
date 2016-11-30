@@ -260,26 +260,26 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 //		Front V2.0
 ////// Gallerie de héro HOMEPAGE ////////////////////////////////////////////////////////////////
-	function PostsByCategory($npost, $charcat) {
+	function PostsByCategory($charcat) {
 
 
 		// Ici je définis mes arguments
 		$args   =   array(
-					//	'category__in'  =>  array(1,2), // Publiés
-						'post_type' 	=>  'hero',		// Type de post
-						'post_status'   =>  'publish',  // Publiés
-						'posts_per_page'=>  $npost,     // Nb de post (relatif)
-						'orderby'       =>  'name',     // Ordonnée par date
-						'order'         =>  'ASC'      // + grand au + petit
+					//	'category__in'  =>  array(1,2), 			// Publiés
+						'post_type' 	=>  'hero',					// Type de post
+						'post_status'   =>  'publish',  			// Publiés
+						//'posts_per_page'=>  $npost,     			// Nb de post (relatif)
+						'orderby'       =>  'name',     			// Ordonnée par date
+						'order'         =>  'ASC',      			// + grand au + petit
+						'meta_key'		=>	'character_category', 	// Dans la catégorie de personnage
+						'meta_value'	=>	$charcat 				// Catégorie choisie dans l'action
 					);
 		// J'effectue la requête
 		$the_query = new WP_query ($args);
-
 		// Je récupère mon template
-		require(TEMPLATEPATH.'/template-parts/loop-home.php');
-
+		require(TEMPLATEPATH.'/template-parts/loop-homev2.php');
 		// Je reste mes requêtes de post
 		wp_reset_postdata();
 	}
-	add_action('MyPostsCat','PostsByCategory',1,2);
+	add_action('MyPostsCat','PostsByCategory',1,1);
 	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE

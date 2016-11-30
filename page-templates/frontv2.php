@@ -14,41 +14,13 @@ get_header(); ?>
 		<div class="wrap--partie-1 row">
 			<section id="listing--left-column" class="column small-6">
 				<h3>Attack</h3>
-				<?php do_action('MyPostsCat', 6, 'attack') ?>
-				<ul class="home--list-heroes" id="homme--list-attack">
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-				</ul>
+				<?php do_action('MyPostsCat','attack') ?>
 				<h3>Defense</h3>
-				<ul class="home--list-heroes" id="homme--list-defense">
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-				</ul>
+				<?php do_action('MyPostsCat','defense') ?>
 				<h3>Tank</h3>
-				<ul class="home--list-heroes" id="homme--list-tank">
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-				</ul>
+				<?php do_action('MyPostsCat','tank') ?>
 				<h3>Support</h3>
-				<ul class="home--list-heroes" id="homme--list-support">
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-					<li><a href="#">Perso</a></li>
-				</ul>
+				<?php do_action('MyPostsCat','support') ?>
 			</section>
 			<section id="listing--right-column" class="column small-6">
 				<!-- REMPLIR ICI AVEC LE NON:HOVER EN ATTENDANT -->
