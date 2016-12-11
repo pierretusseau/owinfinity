@@ -25,27 +25,16 @@ get_header(); ?>
 			<section id="listing--right-column" class="column small-6">
 				<!-- REMPLIR ICI AVEC LE NON:HOVER EN ATTENDANT -->
 				<div id="home--video">
-					<h3>Last hero video</h3>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/6p0osh7STug" frameborder="0" allowfullscreen>
-					</iframe>
+					<h3>One video</h3>
+					<?php if(get_field('video')) : ?>
+						<iframe width="560" height="315" src="<?php the_field("video"); ?>" frameborder="0" allowfullscreen></iframe>
+					<?php else : ?>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/FqnKB22pOC0" frameborder="0" allowfullscreen></iframe>
+					<?php endif; ?>
 					<h3>Recent updates</h3>
 					<div id="recent-update-wrap">
 						<ul id="home--recent-updates" class="row align-spaced">
-							<li class="column small-4">
-								<article>
-									Update 1
-								</article>
-							</li>
-							<li class="column small-4">
-								<article>
-									Update 1
-								</article>
-							</li>
-							<li class="column small-4">
-								<article>
-									Update 1
-								</article>
-							</li>
+							<?php do_action('LastUpdates'); ?>
 						</ul>
 					</div>
 				</div>
