@@ -18,7 +18,7 @@
 		      'not_found_in_trash'=> 'No hero in the trash'
 		      ),
 		    'public' => true,
-		    'capability_type' => 'post',
+		    // 'capability_type' => 'post',
 		    'supports' => array(
 		      'title',
 		      'editor',
@@ -304,4 +304,49 @@
 		wp_reset_postdata();
 	}
 	add_action('LastUpdates','LastUpdates',1,0);
+	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE
+
+////// Gallerie de héro HOMEPAGE ////////////////////////////////////////////////////////////////
+	function HomeLoopBlog() {
+
+
+		// Ici je définis mes arguments
+		$args   =   array(
+						'post_type' 	=>  'post',			// Type de post
+						'post_status'   =>  'publish',  // Publiés
+						'posts_per_page'=>  6,     		// Nb de post (relatif)
+						'orderby'       =>  'date',    	// Ordonnée par date
+						'order'         =>  'DESC',      // + grand au + petit
+					);
+		// J'effectue la requête
+		$the_query = new WP_query ($args);
+		// Je récupère mon template
+		require(TEMPLATEPATH.'/template-parts/loop-homev2-blog.php');
+		// Je reste mes requêtes de post
+		wp_reset_postdata();
+	}
+	add_action('HomeLoopBlog','HomeLoopBlog',2,0);
+	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE
+
+////// Gallerie de héro HOMEPAGE ////////////////////////////////////////////////////////////////
+	function GetBlogPage() {
+
+
+		// Ici je définis mes arguments
+		$args   =   array(
+						'post_type' 	=>  'page',			// Type de post
+						'pagename'		=> 	'blog',			// est bien le blog
+						'post_status'   =>  'publish',  // Publiés
+						'posts_per_page'=>  1,     		// Nb de post (relatif)
+					);
+		// J'effectue la requête
+		$the_query = new WP_query ($args);
+		// Je récupère mon template
+		while ( $the_query->have_posts() ) : $the_query->the_post();
+			echo(the_permalink());
+		endwhile;
+		// Je reste mes requêtes de post
+		wp_reset_postdata();
+	}
+	add_action('GetBlogPage','GetBlogPage',2,0);
 	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE

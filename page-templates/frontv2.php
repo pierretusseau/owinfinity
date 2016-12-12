@@ -52,65 +52,29 @@ get_header(); ?>
 		<div class="row" id="home--partie-2-equalizedblog" data-equalizer="liste-article">
 			<section id="home--wrap-listblog" class="column small-9">
 				<ul id="home--list-blog" class="row">
-					<li class="column small-4">
-						<a href="#">
-							<h4>Titre de l'article</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-						</a>
-					</li>
-					<li class="column small-4">
-						<a href="#">
-							<h4>Titre de l'article</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-						</a>
-					</li>
-					<li class="column small-4">
-						<a href="#">
-							<h4>Titre de l'article</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-						</a>
-					</li>
-					<li class="column small-4">
-						<a href="#">
-							<h4>Titre de l'article</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-						</a>
-					</li>
-					<li class="column small-4">
-						<a href="#">
-							<h4>Titre de l'article</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-						</a>
-					</li>
-					<li class="column small-4">
-						<a href="#">
-							<h4>Titre de l'article</h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
-						</a>
-					</li>
+					<?php do_action('HomeLoopBlog') ?>
 				</ul>
 			</section>
 
 			<section id="home--twitch-block" class="column small-3" data-equalizer-watch="liste-article">
 				<div id="twitch-wrap" data-equalizer-watch="liste-article">
 					<div id="twitch-stream">
-						<!-- EMPTY -->
+						<iframe src="http://streambadge.com/twitch/dark/<?php the_field('twitch_embed') ?>/" style="border:none;height:4em;width:100%"></iframe>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus laborum nobis dolorum velit expedita accusantium quam quod, neque at veritatis.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, sequi, id! Debitis voluptatibus ad sint, veritatis sunt culpa est quam.</p>
+					<?php the_field('twitch_text') ?>
 				</div>
 			</section>
 		</div>
 		<div class="row" id="home--partie-2-buttons">
 			<section id="community--left-column" class="column small-9">
-				<a href="#" class="expanded button">
+				<a href="<?php do_action('GetBlogPage'); ?>" class="expanded button">
 					Read more
 				</a>
 			</section>
 			<section id="community--right-column" class="column small-3">
 				<div class="expanded button-group align-justify">
-					<a href="#" class="button">Twitter</a>
-					<a href="#" class="button">Tipeee</a>
+					<a href="<?php the_field('twitter_link') ?>" class="button" id="home--twitter">Twitter</a>
+					<a href="<?php the_field('tipeee_link') ?>" class="button" id="home--tipeee">Github</a>
 				</div>
 			</section>
 		</div>

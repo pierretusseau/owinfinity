@@ -95,7 +95,7 @@ $recentTransition : ease-in-out 0.25s;
 			position: relative;
 			display:block;
 			overflow: hidden;
-			background:rgba($black,0.4);
+			background: rgba($black,0.4);
 			min-height: 100px;
 			transition: $recentTransition;
 			&:hover {
@@ -150,7 +150,7 @@ $recentTransition : ease-in-out 0.25s;
 // This list everything for the hero listing
 	background:#313131;
 	padding-top: 75px;
-	padding-bottom: 100vh;
+	// padding-bottom: 200px;
 	h3 {
 		text-transform: uppercase;
 	}
@@ -169,11 +169,32 @@ $recentTransition : ease-in-out 0.25s;
 			padding-right: 0px;
 		}
 		&:nth-child(1),
-		&:nth-child()
+		&:nth-child(4) {
+			padding-left: 0;
+		}
 		a {
-			display: block;
+			display: flex;
 			background:rgba($white,0.15);
-			padding: 20px;
+			min-width: 100%;
+			font-size: rem-calc(12);
+			height: 200px;
+			position: relative;
+			padding-bottom: 0px;
+			overflow: hidden;
+			transition: ease-in-out 0.25s;
+			&:hover {
+				padding-bottom: 10px;
+				background:rgba($white,0.25);
+			}
+			h5 {
+				padding: 20px;
+				display: block;
+				text-align: center;
+				// flex: 1;
+				align-self: center;
+				position: absolute;
+				width: 100%;
+			}
 		}
 	}
 }
@@ -187,5 +208,19 @@ $recentTransition : ease-in-out 0.25s;
 }
 #twitch-stream {
 	min-width: 100%;
-	min-height: 200px;
+	// min-height: 200px;
+	margin-bottom: 20px;
+}
+
+#home--twitter {
+	background-color: #55acee;
+	&:hover {
+		background-color: darken(#55acee,15);
+	}
+}
+#home--tipeee {
+	background-color: #131418;
+	&:hover {
+		background-color: lighten(#131418,5);
+	}
 }
