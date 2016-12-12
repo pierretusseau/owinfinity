@@ -25,7 +25,7 @@ get_header(); ?>
 			<section id="listing--right-column" class="column small-6">
 				<!-- REMPLIR ICI AVEC LE NON:HOVER EN ATTENDANT -->
 				<div id="home--video">
-					<h3>One video</h3>
+					<h3>Featured video</h3>
 					<?php if(get_field('video')) : ?>
 						<iframe width="560" height="315" src="<?php the_field("video"); ?>" frameborder="0" allowfullscreen></iframe>
 					<?php else : ?>

@@ -329,6 +329,26 @@
 	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE
 
 ////// Gallerie de héro HOMEPAGE ////////////////////////////////////////////////////////////////
+	function LoopBlog() {
+
+
+		// Ici je définis mes arguments
+		$args   =   array(
+						'post_type' 	=>  'post',			// Type de post
+						'post_status'   =>  'publish',  // Publiés
+						'posts_per_page'=>  20,     		// Nb de post (relatif)
+					);
+		// J'effectue la requête
+		$the_query = new WP_query ($args);
+		// Je récupère mon template
+		require(TEMPLATEPATH.'/template-parts/loop-blog.php');
+		// Je reste mes requêtes de post
+		wp_reset_postdata();
+	}
+	add_action('LoopBlog','LoopBlog',1,0);
+	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE
+
+////// Gallerie de héro HOMEPAGE ////////////////////////////////////////////////////////////////
 	function GetBlogPage() {
 
 
