@@ -379,3 +379,12 @@
 	}
 	add_action('GetBlogPage','GetBlogPage',2,0);
 	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE
+
+// Video Bloc
+		function ImgParallax() {
+		if (is_front_page( '/page-templates/frontv2.php' )) { // If Is home page
+			echo wp_get_attachment_url( get_post_thumbnail_id() );
+		}
+  }
+  add_action('parallax','ImgParallax',1,0);
+  // 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!

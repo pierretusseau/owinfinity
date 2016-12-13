@@ -9,7 +9,7 @@ get_header(); ?>
 		Loading Element
 	</div>
 </section> -->
-<div class="main-wrap">
+<div class="main-wrap parallax-window" data-parallax="scroll" data-image-src="<?php do_action('parallax') ?>">
 	<section id="listing-hero">
 		<div class="wrap--partie-1 row">
 			<section id="listing--left-column" class="column small-6">
