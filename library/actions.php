@@ -388,3 +388,10 @@
   }
   add_action('parallax','ImgParallax',1,0);
   // 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!
+
+  // Social links
+  		function SocialsLink() {
+		require(TEMPLATEPATH.'/template-parts/sidebar-socials.php');
+    }
+    add_action('foundationpress_after_sidebar','SocialsLink',1,0);
+    // 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!

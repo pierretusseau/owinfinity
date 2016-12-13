@@ -6,7 +6,7 @@
 	top:0;
 	// padding-top: 60vh;
 	// width: 100vw;
-	height: 100vh;
+	min-height: 800px;
 	// background-image: url('../images/home-background.jpg');
 	// background-attachment: fixed;
 }
@@ -196,6 +196,14 @@ $recentTransition : ease-in-out 0.25s;
 				// position: absolute;
 				width: 100%;
 			}
+			p {
+				position: absolute;
+				font-family: BigNoodle;
+				font-size: rem-calc(20);
+				width:100%;
+				bottom: -10px;
+				text-align: center;
+			}
 		}
 	}
 }
@@ -240,7 +248,7 @@ $recentTransition : ease-in-out 0.25s;
 #home--twitter,
 #home--tipeee {
 	i {
-		transform: scale(2.5);
+		transform: scale(2.25);
 	}
 }
 #home--twitter {
@@ -253,11 +261,5 @@ $recentTransition : ease-in-out 0.25s;
 	background-color: #131418;
 	&:hover {
 		background-color: lighten(#131418,5);
-	}
-}
-
-.fi-social-twitter {
-	&::before {
-		content:"test";
 	}
 }
