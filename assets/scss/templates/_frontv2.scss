@@ -81,6 +81,7 @@
 	width:60px;
 	height:60px;
 	left:0;
+	top:0;
 	transform: skewX(20deg);
 }
 
@@ -236,6 +237,12 @@ $recentTransition : ease-in-out 0.25s;
 	margin-bottom: 20px;
 }
 
+#home--twitter,
+#home--tipeee {
+	i {
+		transform: scale(2.5);
+	}
+}
 #home--twitter {
 	background-color: #55acee;
 	&:hover {
@@ -246,5 +253,11 @@ $recentTransition : ease-in-out 0.25s;
 	background-color: #131418;
 	&:hover {
 		background-color: lighten(#131418,5);
+	}
+}
+
+.fi-social-twitter {
+	&::before {
+		content:"test";
 	}
 }
