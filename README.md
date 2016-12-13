@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/pierretusseau/owinfinity.svg?branch=master)](https://travis-ci.org/pierretusseau/owinfinity)
 # OWfinity
 A website by Pierre Tusseau. With the help of Kevin Bacas and Narcasung
 
