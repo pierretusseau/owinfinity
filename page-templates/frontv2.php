@@ -27,9 +27,9 @@ get_header(); ?>
 				<div id="home--video">
 					<h3>Featured video</h3>
 					<?php if(get_field('video')) : ?>
-						<iframe width="560" height="315" src="<?php the_field("video"); ?>" frameborder="0" allowfullscreen></iframe>
+						<iframe width="580" height="315" src="<?php the_field("video"); ?>" frameborder="0" allowfullscreen></iframe>
 					<?php else : ?>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/FqnKB22pOC0" frameborder="0" allowfullscreen></iframe>
+						<iframe width="580" height="315" src="https://www.youtube.com/embed/FqnKB22pOC0" frameborder="0" allowfullscreen></iframe>
 					<?php endif; ?>
 					<h3>Recent updates</h3>
 					<div id="recent-update-wrap">
@@ -52,7 +52,12 @@ get_header(); ?>
 		<div class="row" id="home--partie-2-equalizedblog" data-equalizer="liste-article">
 			<section id="home--wrap-listblog" class="column small-9">
 				<ul id="home--list-blog" class="row">
-					<?php do_action('HomeLoopBlog') ?>
+					<?php if(get_locale()=="fr_FR") : ?>
+						<?php do_action('HomeLoopBlog','fr') ?>
+					<?php else: ?>
+						<?php do_action('HomeLoopBlog','en') ?>
+					<?php endif; ?>
+
 				</ul>
 			</section>
 

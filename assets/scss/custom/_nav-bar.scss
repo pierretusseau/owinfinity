@@ -6,7 +6,7 @@
   Header
 *****************/
 .site-header {
-	z-index: 2;
+	z-index: 10;
 	top:0;
 	position:fixed;
 	// @include linear-transparent(rga($white,0.5));
@@ -48,12 +48,13 @@ li.home a {
 	position:relative;
 }
 .top-bar-right {
+	z-index: 1;
 	float: left;
+	left: 14px;
 }
 .top-bar-right,
 .top-bar-right-right {
 	position: relative;
-	left: 14px;
 	#menu-main,
 	#menu-main-fr,
 	#menu-language {
@@ -104,6 +105,7 @@ li.home a {
 .top-bar-right-right {
 	position:absolute;
 	right:0;
+	z-index: 0;
 }
 
 .scrolled-top {
@@ -163,7 +165,7 @@ li.home a {
 			// content: 'v.'$version-number;
 			position: absolute;
 			line-height: rem-calc(15);
-			padding: 0px 21px;
+			padding: 0px 25px;
 			font-size: rem-calc(10);
 			bottom:0px;
 			left:-10px;

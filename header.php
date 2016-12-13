@@ -65,7 +65,7 @@
 							<img src="<?= get_stylesheet_directory_uri().'/assets/images/icons/logo.png' ?>" alt="Overwatch Infinity Logo" />
 						</a>
 						<div class="version-number-wrap">
-							<div class="version-number">v.BETA</div>
+							<div class="version-number">v1.0</div>
 						</div>
 					</li>
 				</ul>

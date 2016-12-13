@@ -111,7 +111,7 @@ $recentTransition : ease-in-out 0.25s;
 				position: absolute;
 				z-index: -1;
 				min-width: 150%;
-				margin: auto auto auto -20px;
+				margin: auto auto auto -40px;
 			}
 			h5,p {
 				padding: 0 10px;
@@ -195,6 +195,30 @@ $recentTransition : ease-in-out 0.25s;
 				// position: absolute;
 				width: 100%;
 			}
+		}
+	}
+}
+.empty-article {
+	.empty-inside {
+		min-height: 200px;
+		background-color:rgba($white,0.05);
+		line-height: 200px;
+		display:flex;
+		position: relative;
+		cursor : not-allowed;
+		// h5 {
+		// 	width:100%;
+		// 	opacity:0.5;
+		// 	top:130px;
+		// 	font-size: rem-calc(20);
+		// 	position: absolute;
+		// 	text-align: center;
+		// 	font-family: BigNoodle;
+		// }
+		img {
+			align-self: center;
+			margin:0 auto;
+			opacity:0.25;
 		}
 	}
 }
