@@ -83,5 +83,9 @@
 		</nav>
 	</header>
 
-	<section class="container">
+	<?php if(!is_singular('hero') || is_page_template('page-templates/page-full-width.php')) : ?>
+		<section class="container"  data-parallax="scroll" data-image-src="<?php do_action('parallax') ?>">
+	<?php else : ?>
+		<section class="container">
+	<?php endif; ?>
 		<?php do_action( 'foundationpress_after_header' );

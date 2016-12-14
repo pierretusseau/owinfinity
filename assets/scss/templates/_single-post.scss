@@ -1,7 +1,7 @@
 #single-post {
   @include grid-row();
   margin-top: 3rem;
-
+  min-height: 100vh;
   .main-content {
     @include breakpoint(small) {
       @include grid-column(12);
@@ -10,7 +10,7 @@
     @include breakpoint(medium) {
       @include grid-column(8);
     }
-  }
+}
 }
 
 .single-post {
@@ -18,5 +18,20 @@
 	color:$white;
 	h1 {
 		line-height: rem-calc(75);
+	}
+	.container {
+		top:0px;
+		padding-bottom:200px;
+	}
+	.entry-content {
+		padding: 20px;
+		background: rgba(0,0,0,0.5);
+	}
+	p {
+		margin: 0 0 10px 0;
+		padding: 0;
+		&:last-child {
+			margin:0;
+		}
 	}
 }

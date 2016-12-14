@@ -30,6 +30,8 @@
 }
 
 .page-template-page-full-width {
-	background-attachment: fixed;
-	background-size: cover;
+	.container {
+		top:0px;
+		padding-bottom:200px;
+	}
 }

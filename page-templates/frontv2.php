@@ -12,7 +12,7 @@ get_header(); ?>
 <!-- <div class="main-wrap parallax-window" data-parallax="scroll" data-image-src="<?php do_action('parallax') ?>"> -->
 <div class="main-wrap">
 	<section id="listing-hero">
-		<video class="bv-video" loop></video>
+		<video class="bv-video" loop muted></video>
 		<?php // do_action('simple_thumb') ?>
 		<div class="wrap--partie-1 row">
 			<section id="listing--left-column" class="column small-6">

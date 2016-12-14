@@ -11,11 +11,7 @@
 ?>
 
 		</section>
-		<?php if (is_front_page() || is_page_template('page-templates/blog.php')): ?>
-			<div class="clr"></div>
-		<?php else: ?>
-			<div class="charCLR"></div>
-		<?php endif; ?>
+		<div class="clr"></div>
 		<div id="footer-container">
 			<?php if(!is_front_page()) : ?>
 				<header>

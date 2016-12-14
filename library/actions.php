@@ -384,6 +384,8 @@
 function ImgParallax() {
 	if (is_front_page() || is_page_template('page-templates/blog.php')) { // If Is home page
 		echo wp_get_attachment_url( get_post_thumbnail_id() );
+	} else {
+		echo wp_get_attachment_url( get_post_thumbnail_id(2) );
 	}
 }
 add_action('parallax','ImgParallax',1,0);
