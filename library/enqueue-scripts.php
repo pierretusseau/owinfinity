@@ -36,6 +36,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	//wp_enqueue_script( 'myjs', get_template_directory_uri() . '/assets/javascript/custom/myjs.js', array(), '1.0', false);
 	wp_enqueue_script( 'gsap', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js', array(), '1.18.4', true);
 	wp_enqueue_script( 'parallax', get_template_directory_uri() . '/assets/components/parallax.js/parallax.js', array(), '1.4.2', true);
+	wp_enqueue_script( 'backgroundVideo', get_template_directory_uri() . '/assets/components/backgroundVideo.js/backgroundVideo.js', array(), '2.0.2', true);
 	// wp_enqueue_script( 'TweenLite', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenLite.min.js', array(), '1.18.4', true);
 	// wp_enqueue_script( 'TimeLineMax', '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TimelineMax.min.js"></script>', array(), '1.18.4', true);
 	// wp_enqueue_script( 'EasePack', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/easing/EasePack.min.js', array(), '1.18.4', true);

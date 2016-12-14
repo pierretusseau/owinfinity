@@ -16,12 +16,25 @@
 	height:800px;
 }
 /*****************
+  Video
+*****************/
+// #video-cache {
+// 	position: fixed;
+// 	z-index: -1;
+// 	opacity:0;
+// 	transition: linear 1s;
+// }
+.bv-video-wrap {
+	transition: linear 1s;
+	opacity:0;
+}
+/*****************
   listing hero + aperçu hero (partie 1)
 *****************/
 #listing-hero {
 // This list everything for the hero listing
 	// Test color
-	//background-color: green;
+	background-color: rgba($black,0.25);
 	position: relative;
 	margin-top: -50px;
 	width: 100%;
@@ -34,6 +47,7 @@
 }
 .wrap--partie-1 {
 	padding-top: 50px;
+	z-index: 1;
 }
 .home--svg-stroke {
 	position:absolute;
@@ -238,6 +252,7 @@ $recentTransition : ease-in-out 0.25s;
 	background-color: $Twitch;
 	padding:20px;
 	color:$white;
+	min-height: 400px;
 }
 #twitch-stream {
 	min-width: 100%;

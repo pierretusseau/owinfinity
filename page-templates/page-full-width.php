@@ -4,7 +4,7 @@ Template Name: Full Width
 */
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/featured-image' ); ?>
+<?php // get_template_part( 'template-parts/featured-image' ); ?>
 <div class="row">
 	<header>
 		<h1 class="entry-title"><?php the_title(); ?></h1>

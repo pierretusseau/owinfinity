@@ -381,17 +381,45 @@
 	// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRE
 
 // Video Bloc
-		function ImgParallax() {
-		if (is_front_page( '/page-templates/frontv2.php' )) { // If Is home page
-			echo wp_get_attachment_url( get_post_thumbnail_id() );
+function ImgParallax() {
+	if (is_front_page() || is_page_template('page-templates/blog.php')) { // If Is home page
+		echo wp_get_attachment_url( get_post_thumbnail_id() );
+	}
+}
+add_action('parallax','ImgParallax',1,0);
+// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!
+
+// Social links
+function SocialsLink() {
+	require(TEMPLATEPATH.'/template-parts/sidebar-socials.php');
+}
+add_action('foundationpress_after_sidebar','SocialsLink',1,0);
+// 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!
+
+// Social links
+function TwitchSidebar() {
+	$sbTwitch = 0;
+	if(get_locale()=="fr_FR") :
+		$sbTwitch = 388;
+	else:
+		$sbTwitch = 2;
+	endif;
+	function isHome() {
+		if(!is_front_page()){
+			echo 'twitch-not-home';
 		}
-  }
-  add_action('parallax','ImgParallax',1,0);
+		else {
+			echo 'twitch-home';
+		}
+	}
+	require(TEMPLATEPATH.'/template-parts/sidebar-twitch.php');
+}
+  add_action('foundationpress_before_sidebar','TwitchSidebar',1,0);
   // 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!
 
   // Social links
-  		function SocialsLink() {
-		require(TEMPLATEPATH.'/template-parts/sidebar-socials.php');
-    }
-    add_action('foundationpress_after_sidebar','SocialsLink',1,0);
-    // 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!
+  function SimpleThumb() {
+  	require(TEMPLATEPATH.'/template-parts/simple-thumb.php');
+  }
+  add_action('simple_thumb','SimpleThumb',1,0);
+  // 	NOM DE L'ACTION / FUNCTION / PRIORITE / NOMBRE DE PARAMETRES !!!

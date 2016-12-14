@@ -9,8 +9,11 @@ get_header(); ?>
 		Loading Element
 	</div>
 </section> -->
-<div class="main-wrap parallax-window" data-parallax="scroll" data-image-src="<?php do_action('parallax') ?>">
+<!-- <div class="main-wrap parallax-window" data-parallax="scroll" data-image-src="<?php do_action('parallax') ?>"> -->
+<div class="main-wrap">
 	<section id="listing-hero">
+		<video class="bv-video" loop></video>
+		<?php // do_action('simple_thumb') ?>
 		<div class="wrap--partie-1 row">
 			<section id="listing--left-column" class="column small-6">
 				<h3>Attack</h3>
@@ -62,21 +65,16 @@ get_header(); ?>
 			</section>
 
 			<section id="home--twitch-block" class="column small-3" data-equalizer-watch="liste-article">
-				<div id="twitch-wrap" data-equalizer-watch="liste-article">
-					<div id="twitch-stream">
-						<iframe src="http://streambadge.com/twitch/dark/<?php the_field('twitch_embed') ?>/" style="border:none;height:4em;width:100%"></iframe>
-					</div>
-					<?php the_field('twitch_text') ?>
-				</div>
+				<?php do_action('foundationpress_before_sidebar') ?>
 			</section>
 		</div>
 		<div class="row" id="home--partie-2-buttons">
-			<section id="community--left-column" class="column small-9">
+			<section id="community--left-column" class="columns small-9">
 				<a href="<?php do_action('GetBlogPage'); ?>" class="expanded button">
 					Read more
 				</a>
 			</section>
-			<section id="community--right-column" class="column small-3">
+			<section id="community--right-column" class="columns small-3">
 				<?php do_action('foundationpress_after_sidebar') ?>
 			</section>
 		</div>

@@ -8,7 +8,7 @@ require('last-edited.php');
 ?>
 
 <li class="columns small-4 last-edited-item">
-	<a class="last-edited-link">
+	<a href="<?php the_permalink() ?>" class="last-edited-link">
 		<?php the_post_thumbnail(); ?>
 		<h5><?php the_title(); ?></h5>
 		<p><strong><?= $changeSince ?></strong> <?= __( 'Day(s) since last update', 'foundationpress' ) ?> <?php //dateUpdate() ?></p>
