@@ -1,6 +1,6 @@
 const backgroundVideo = new BackgroundVideo('.bv-video', {
   src: [
-	'../wp-content/themes/overwatch-theme/assets/videos/noel_1.mp4',
+	'../wp-content/themes/overwatch-theme/assets/videos/oasis.mp4',
 	// '../wp-content/themes/overwatch-theme/assets/videos/noel_2.mp4',
 	// '../wp-content/themes/overwatch-theme/assets/videos/xmas_background.webm',
   ],
